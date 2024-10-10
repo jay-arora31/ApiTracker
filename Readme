@@ -7,13 +7,12 @@ This project is an API Dashboard built with Django as the backend using PostgreS
 - Create, read, update, and delete Todos.
 - Monitor API hit statistics such as request types, browsers used, and average response time.
 - Health check endpoint to verify API status.
-### Prerequisites
 
+### Prerequisites
  Python 3.8+
  Django 4.x
  Django REST Framework
  PostgreSQL
- ReactJS
  NodeJS
 
 **Clone the Repository:**
