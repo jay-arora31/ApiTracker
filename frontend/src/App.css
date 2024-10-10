@@ -4,31 +4,31 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #f8f9fa;
   color: #333;
-  overflow: hidden; /* Prevent body scrolling */
+  overflow: hidden;
 }
 
 .dashboard {
-  display: flex; /* Changed to flex for better control */
+  display: flex;
   min-height: 100vh;
 }
 
 .sidebar {
-  position: fixed; /* Fix the sidebar */
-  width: 300px; /* Fixed width */
-  height: 100vh; /* Full height */
+  position: fixed;
+  width: 300px;
+  height: 100vh;
   background-color: #fff;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  overflow-y: auto; /* Allow sidebar content to scroll if needed */
-  box-sizing: border-box; /* Include padding in width calculation */
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .main-content {
-  margin-left: 300px; /* Match sidebar width */
+  margin-left: 300px;
   flex-grow: 1;
   padding: 20px;
   height: 100vh;
-  overflow-y: auto; /* Enable scrolling for main content */
+  overflow-y: auto;
   box-sizing: border-box;
 }
 
@@ -103,64 +103,60 @@ header {
   background-color: #fff;
 }
 
+.stat-card {
+  background-color: white;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  flex: 1;
+}
 
-  
-  .stat-card {
-    background-color: white;
-    padding: 24px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    flex: 1;
-  }
-  
-  /* Icon styles */
-  .stat-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-  }
-  
-  /* Specific icon backgrounds */
-  .stat-card:nth-child(1) .stat-icon {
-    background-color: #E7F5EF;
-    color: #66C87B;
-  }
-  
-  .stat-card:nth-child(2) .stat-icon {
-    background-color: #E8F3FF;
-    color: #70B6FF;
-  }
-  
-  .stat-card:nth-child(3) .stat-icon {
-    background-color: #FCE7F6;
-    color: #FF4A55;
-  }
-  
-  .stat-info {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .stat-info p {
-    color: #8E8E8E;
-    font-size: 14px;
-    margin: 0;
-    margin-bottom: 4px;
-  }
-  
-  .stat-info h3 {
-    color: #3D3D3D;
-    font-size: 24px;
-    font-weight: 600;
-    margin: 0;
-  }
+.stat-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.stat-card:nth-child(1) .stat-icon {
+  background-color: #E7F5EF;
+  color: #66C87B;
+}
+
+.stat-card:nth-child(2) .stat-icon {
+  background-color: #E8F3FF;
+  color: #70B6FF;
+}
+
+.stat-card:nth-child(3) .stat-icon {
+  background-color: #FCE7F6;
+  color: #FF4A55;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-info p {
+  color: #8E8E8E;
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.stat-info h3 {
+  color: #3D3D3D;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
 
 .charts-container {
   display: flex;
@@ -195,6 +191,7 @@ header {
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -250,38 +247,38 @@ th {
   background-color: #f8f9fa;
   font-weight: bold;
 }
-.table-controls{
+
+.table-controls {
   display: flex;
   margin-right: 40px;
 }
+
 .filter-dropdown {
-  margin-left: 30px; /* Existing margin */
+  margin-left: 30px;
 }
 
 .filter-dropdown select {
-  padding: 10px 15px; /* Padding for a better touch target */
-  border-radius: 5px; /* Rounded corners */
-  border: 1px solid #ddd; /* Light border */
-  background: #fff; /* White background */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  font-size: 14px; /* Font size */
-  color: #333; /* Text color */
-  cursor: pointer; /* Pointer cursor for better UX */
-  transition: border-color 0.3s, box-shadow 0.3s; /* Transition effects */
+  padding: 10px 15px; 
+  border-radius: 5px; 
+  border: 1px solid #ddd; 
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  font-size: 14px; 
+  color: #333; 
+  cursor: pointer; 
+  transition: border-color 0.3s, box-shadow 0.3s; 
 }
 
 .filter-dropdown select:focus {
-  border-color: #007bff; /* Change border color on focus */
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Shadow effect on focus */
-  outline: none; /* Remove default outline */
+  border-color: #007bff; 
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+  outline: none; 
 }
 
-/* Optional: Add hover effect */
 .filter-dropdown select:hover {
-  border-color: #007bff; /* Change border color on hover */
+  border-color: #007bff; 
 }
 
-/* App.css */
 .pro-upgrade {
   margin-top: 80%;
   background: linear-gradient(135deg, #ec6f91, #8373e6);
