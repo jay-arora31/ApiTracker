@@ -7,7 +7,7 @@ import time
 class APIHitTrackingMiddleware(MiddlewareMixin):
     def process_request(self, request):
         # Record the start time
-        request.start_time = time.time()
+        request.start_time = time.time()  # Store the current time in the request object
 
         request_type = request.method
         payload = request.body.decode('utf-8') if request.body else ''
@@ -44,9 +44,9 @@ class APIHitTrackingMiddleware(MiddlewareMixin):
 
     def process_response(self, request, response):
         # Calculate the response time
-        response_time = time.time() - request.start_time  
-        self.api_hit_entry.response_time = response_time  
-        self.api_hit_entry.status = response.status_code  
+        response_time = time.time() - request.start_time  # Calculate elapsed time
+        self.api_hit_entry.response_time = response_time  # Set the calculated response time
+        self.api_hit_entry.status = response.status_code  # Set the HTTP response status code
 
         # Save the API hit entry to the database
         self.api_hit_entry.save()

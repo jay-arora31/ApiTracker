@@ -20,7 +20,7 @@ class APIHit(models.Model):
 class Todo(models.Model):
     task_name = models.CharField(max_length=200)
     def __str__(self):
-        return f'{self.task_name}'
+        return f'{self.id}'
     
 
     

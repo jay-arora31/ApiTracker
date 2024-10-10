@@ -63,7 +63,7 @@ def delete_todo(request, todo_id):
         return Response({'error': 'Todo not found.'}, status=status.HTTP_404_NOT_FOUND)
 
     todo.delete()
-    return Response(status=status.HTTP_204_NO_CONTENT)
+    return Response({'Deleted': 'Todo deleted.'},status=status.HTTP_204_NO_CONTENT)
 
 
 def health(request):
