@@ -1,0 +1,343 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  overflow: hidden; /* Prevent body scrolling */
+}
+
+.dashboard {
+  display: flex; /* Changed to flex for better control */
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: fixed; /* Fix the sidebar */
+  width: 300px; /* Fixed width */
+  height: 100vh; /* Full height */
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  overflow-y: auto; /* Allow sidebar content to scroll if needed */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.main-content {
+  margin-left: 300px; /* Match sidebar width */
+  flex-grow: 1;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto; /* Enable scrolling for main content */
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.logo .icon {
+  margin-right: 10px;
+}
+
+.nav-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-items li {
+  padding: 10px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.nav-items li svg {
+  margin-right: 10px;
+}
+
+.nav-items li.active {
+  color: #f0f0ff;
+  font-weight: bold;
+  background-color: #4F46E5;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.nav-items li .arrow {
+  margin-left: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  margin-left: 10px;
+}
+
+.stats-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+
+  
+  .stat-card {
+    background-color: white;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    flex: 1;
+  }
+  
+  /* Icon styles */
+  .stat-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+  
+  /* Specific icon backgrounds */
+  .stat-card:nth-child(1) .stat-icon {
+    background-color: #E7F5EF;
+    color: #66C87B;
+  }
+  
+  .stat-card:nth-child(2) .stat-icon {
+    background-color: #E8F3FF;
+    color: #70B6FF;
+  }
+  
+  .stat-card:nth-child(3) .stat-icon {
+    background-color: #FCE7F6;
+    color: #FF4A55;
+  }
+  
+  .stat-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stat-info p {
+    color: #8E8E8E;
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+  
+  .stat-info h3 {
+    color: #3D3D3D;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+.charts-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 70px;
+}
+
+.chart-card {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-basis: 45%;
+}
+
+.charts-container .chart-card:first-child {
+  flex-basis: 60%;
+}
+
+.charts-container .chart-card:last-child {
+  flex-basis: 35%;
+}
+
+.chart-card h3 {
+  margin: 0 0 5px 0;
+}
+
+.requests-table {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.pagination button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.table-actions {
+  display: flex;
+  align-items: center;
+}
+
+.filter-button {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+.table-controls{
+  display: flex;
+  margin-right: 40px;
+}
+.filter-dropdown {
+  margin-left: 30px; /* Existing margin */
+}
+
+.filter-dropdown select {
+  padding: 10px 15px; /* Padding for a better touch target */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ddd; /* Light border */
+  background: #fff; /* White background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-size: 14px; /* Font size */
+  color: #333; /* Text color */
+  cursor: pointer; /* Pointer cursor for better UX */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transition effects */
+}
+
+.filter-dropdown select:focus {
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Shadow effect on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Optional: Add hover effect */
+.filter-dropdown select:hover {
+  border-color: #007bff; /* Change border color on hover */
+}
+
+/* App.css */
+.pro-upgrade {
+  margin-top: 80%;
+  background: linear-gradient(135deg, #ec6f91, #8373e6);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.pro-upgrade h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.pro-upgrade button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: white;
+  color: #8373e6;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-profile div {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-profile span {
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.role {
+  color: #888;
+}
+
+.user-profile svg {
+  margin-left: auto;
+  color: #888;
+}

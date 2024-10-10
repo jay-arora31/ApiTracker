@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+
+# Django
+*.log
+*.pot
+*.pyc
+*.db
+*.sqlite3
+*.sqlite
+*.egg-info/
+instance/
+media/
+staticfiles/
+
+# Ignore migrations
+**/migrations/*
+!**/migrations/__init__.py
+
+# Virtual Environment
+venv/
+env/
+.venv/
+env.bak/
+venv.bak/
+ENV/
+ENV.bak/
+
+# IDEs
+.vscode/
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
